@@ -77,9 +77,9 @@ function Paises()
             var countries = data;
 
             var regional_countries = [];
-            countries.forEach(item => {
-                if (item.region == region) {
-                    regional_countries.push(item);
+            countries.forEach(value => {
+                if (value.region == region) {
+                    regional_countries.push(value);
                    
                 }
             });
@@ -94,16 +94,16 @@ function MostrarCountries(countries, region)
 {
     //recorrer con foreach
     var html = '';
-    countries.forEach(item => {
+    countries.forEach(value => {
         html += `
         <div class="card"> 
-            <h5 class="card-title"> ${item.name}</h5>      
-                <img src="${item.flag}" alt="${item.name}" class="card-img-top" style="height:150px">
+            <h5 class="card-title"> ${value.name}</h5>      
+                <img src="${value.flag}" alt="${value.name}" class="card-img-top" style="height:150px">
              <div class="card-body"> 
-                <h5 class="card-title">Capital: ${item.capital}</h5>
-                <h5 class="card-title">Región: ${item.region}</h5>
-                <h5 class="card-title">Subregión: ${item.subregion}</h5>
-                <h5 class="card-title">Población: ${item.population}</h5>
+                <h5 class="card-title">Capital: ${value.capital}</h5>
+                <h5 class="card-title">Región: ${value.region}</h5>
+                <h5 class="card-title">Subregión: ${value.subregion}</h5>
+                <h5 class="card-title">Población: ${value.population}</h5>
              </div>
             </div>
         </div>
